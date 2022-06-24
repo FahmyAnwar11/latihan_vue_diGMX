@@ -1,0 +1,3 @@
+valet :
+akan membuat configurasi lebih mudah
+jadi penulisan di google gausah pake 8080/ harus run serve dulu, tinggal nulisin nama filenya ditempat akhiran .test

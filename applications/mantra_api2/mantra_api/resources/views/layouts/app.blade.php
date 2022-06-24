@@ -7,9 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <link rel="shortcut icon" href="/favicon.ico">
+    <title>MANTRA - Mangrupa Intranet</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/image/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -17,6 +19,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/assets/css/mantra.css" rel="stylesheet">
 </head>
 <body>
     @yield('contents')

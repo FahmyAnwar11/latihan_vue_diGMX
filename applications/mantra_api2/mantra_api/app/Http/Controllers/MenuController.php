@@ -43,13 +43,14 @@ class MenuController extends Controller
         $title = $request->title;
         $description = $request->description;
         $link = $request->link;
+        $section = $request->section;
 
         $menu = new MenuModel();
 
         $menu->title = $title;
         $menu->description = $description;
         $menu->link = $link;
-        
+        $menu->section = $section;
         $menu->save();
 
         return response()->json([
@@ -97,14 +98,15 @@ class MenuController extends Controller
         $title = $request->title;
         $description = $request->description;
         $link = $request->link;
+        $section = $request->section;
 
         $menu = MenuModel::where('id', $id)->first();
 
         if ($menu) {
-            $menu->title = $title;
-            $menu->description = $description;
-            $menu->link = $link;
-            
+            $menu->title = $title ?: $menu->title;
+            $menu->description = $description ?: $menu->description;
+            $menu->link = $link ?: $menu->link;
+            $menu->section = $section ?: $menu->section;
             $menu->save();
     
             return response()->json([
